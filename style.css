@@ -4,3 +4,8 @@
     min-height: 20px;
     display: inline-block;
   }
+
+  .gridRow {
+    border: 1px solid black;
+    display: inline-block;
+}
