@@ -1,16 +1,16 @@
 const container = document.getElementById("container");
 
-function makeGrid(size) {
-  for (let i = 0; i < size; i++) {
-    const newDiv = document.createElement("div");
-    newDiv.classList.add('square');
-    container.appendChild(newDiv);
+let gridSize = 16;
 
-    for (let j = 0; j < size; j++) {
-      newDiv.classList.add('square');
-      container.appendChild(newDiv);
-    }
+function makeGrid(screen) {
+  for (let i = 0; i < screen ** 2; i++) {
+      const square = document.createElement("div");
+      square.classList.add('square');
+      square.style.backgroundColor = 'blue';
+      container.appendChild(square);
+      container.style.gridTemplateColumns = 'repeat($(screen), auto)';
+      container.style.gridTemplateRows = 'repeat($(screen), auto)';
   }
 };
 
-makeGrid(16);
+makeGrid(gridSize);
