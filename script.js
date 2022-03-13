@@ -9,6 +9,7 @@ function makeGrid(screenSize) {
       square.style.backgroundColor = 'blue';
       container.appendChild(square);
   }
+  console.log('print')
   container.style.gridTemplateColumns = 'repeat($(screen), auto)';
   container.style.gridTemplateRows = 'repeat($(screen), auto)';
 };
