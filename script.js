@@ -15,3 +15,5 @@ function makeGrid(screenSize) {
 };
 
 makeGrid(gridSize);
+
+
