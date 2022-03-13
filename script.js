@@ -2,17 +2,15 @@ const container = document.getElementById("container");
 
 function makeGrid(size) {
   for (let i = 0; i < size; i++) {
-    const square = container.createElement('square');
-    square.style.borderColor = 'black';
+    const div = document.createElement("div");
+    div.classList.add('square');
     container.appendChild(square);
 
     for (let j=0;j < size; j++) {
-      let square = document.createElement('div');
-      square.className = 'square';
-      document.body.appendChild(square);
+      div.classList.add('square');
+      container.appendChild(square);
     }
-    let br = document.createElement('br');
-    document.body.appendChild(br);
   }
-  
 };
+
+makeGrid(16);
