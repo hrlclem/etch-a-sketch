@@ -2,17 +2,18 @@ const container = document.querySelector(".container");
 
 let gridSize = 16;
 
-function makeGrid(screenSize) {
-  for (let i = 0; i < screenSize ** 2; i++) {
-      let square = document.createElement("div");
-      square.classList.add('square');
-      square.style.backgroundColor = 'blue';
-      container.appendChild(square);
+function makeGrid(col , rows) {
+  for(let i = 0; i < (col * rows); i++) {
+      const div = document.createElement('div') 
+      container.style.gridTemplateColumns = `repeat(${col}, 1fr)`;
+      container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+      container.appendChild(div).classList.add('box')
   }
-  container.style.gridTemplateColumns = 'repeat($(screenSize), auto)';
-  container.style.gridTemplateRows = 'repeat($(screenSize), auto)';
-};
+}
 
-makeGrid(gridSize);
+makeGrid(16,16); 
+
+
+
 
 
