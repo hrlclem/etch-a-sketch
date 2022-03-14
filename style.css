@@ -2,11 +2,10 @@
   border-color: 1px solid black;
   background-color: blue;
   display: grid;
-  width:50%;
-  height:50%;
 }
 
-.box {
+.square {
   border-color: 1px solid black;
   background-color: blue;
+  color: blue;
 }
