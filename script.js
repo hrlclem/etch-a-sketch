@@ -1,15 +1,16 @@
 const container = document.querySelector(".container");
 
-let gridSize = 4;
+let gridSize = 10;
 
-function makeGrid(col , rows) {
-  for(let i = 0; i < (col * rows); i++) {
-      const div = document.createElement('div') 
-      container.style.gridTemplateColumns = `repeat(${col}, 1fr)`;
-      container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
-      container.appendChild(div).classList.add('square')
-      div.innerHTML = ".";
+function makeGrid(gridSize) {
+  for(let i = 0; i < gridSize; i++) {
+    for(let j = 0; j < gridSize; j++) {
+        const div = document.createElement('div') 
+        container.style.gridTemplateColumns = `repeat(${gridSize}, auto)`;
+        container.style.gridTemplateRows = `repeat(${gridSize}, auto)`;
+        container.appendChild(div).classList.add('square')
+    }
   }
 }
 
-makeGrid(gridSize, gridSize); 
+makeGrid(gridSize); 

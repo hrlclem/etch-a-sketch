@@ -1,11 +1,19 @@
 .container {
-  border-color: 1px solid black;
-  background-color: blue;
   display: grid;
+  width: 600px;
+  height: 600px;
 }
 
 .square {
-  border-color: 1px solid black;
   background-color: blue;
   color: blue;
 }
+
+/* .page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+} */
