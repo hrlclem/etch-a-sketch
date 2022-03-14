@@ -1,2 +1,2 @@
-# etch-and-sketch
-Etch and Sketch project for The Odin Project cursus
+# etch-a-sketch
+Etch a Sketch project for The Odin Project cursus
