@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 const blackBtn = document.querySelector(".black");
 const clearBtn = document.querySelector(".clear");
+const eraseBtn = document.querySelector(".erase");
 const colorsBtn = document.querySelector(".colors");
 
 
@@ -10,7 +11,8 @@ const colorsBtn = document.querySelector(".colors");
 let gridSize = 16;
 makeGrid(gridSize); 
 blackColor();
-
+eraseAction();
+const square = container.querySelectorAll('.square');
 
 
 function makeGrid(gridSize) {
@@ -26,10 +28,17 @@ function makeGrid(gridSize) {
 }
 
 function blackColor() {
-  const square = container.querySelectorAll('.square');
   blackBtn.addEventListener('click', () => {
     square.forEach(square => square.addEventListener('mouseover', () => {
       square.style.background = 'black'; 
+    }))
+  })
+}
+
+function eraseAction() {
+  eraseBtn.addEventListener('click', () => {
+    square.forEach(square => square.addEventListener('mouseover', () => {
+      square.style.background = 'white'; 
     }))
   })
 }
