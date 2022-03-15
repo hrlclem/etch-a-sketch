@@ -1,16 +1,15 @@
 const container = document.querySelector(".container");
-const square = document.querySelector(".square");
+const blackBtn = document.querySelector(".black");
+const clearBtn = document.querySelector(".clear");
+const colorsBtn = document.querySelector(".colors");
+
+
+
 
 
 let gridSize = 16;
 makeGrid(gridSize); 
-
-square.addEventListener("mouseover", function() {
-  square.style.backgroundColor = "green";
-})
-
-
-
+blackColor();
 
 
 
@@ -26,5 +25,11 @@ function makeGrid(gridSize) {
   }
 }
 
-
-
+function blackColor() {
+  const square = container.querySelectorAll('.square');
+  blackBtn.addEventListener('click', () => {
+    square.forEach(square => square.addEventListener('mouseover', () => {
+      square.style.background = 'black'; 
+    }))
+  })
+}

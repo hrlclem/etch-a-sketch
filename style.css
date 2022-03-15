@@ -1,6 +1,4 @@
-body {  
-  border-color: red;
-}
+
 
 .title{
   display: flex;
@@ -27,6 +25,5 @@ body {
 
 .square {
   background-color: white;
-  border-color:black;
   padding:10px;
 }
