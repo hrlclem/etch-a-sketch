@@ -5,27 +5,29 @@ const eraseBtn = document.querySelector(".erase");
 const colorsBtn = document.querySelector(".colors");
 
 // Running it
-let gridSize = 16;
-makeGrid(gridSize); 
+let gridSize = 10;
+container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+
+
+
+
+createGrid(gridSize)
+const square = container.querySelectorAll('.square');
 blackColor();
 eraseAction();
-clearAction();
-const square = container.querySelectorAll('.square');
 
 
 
 
-
-// Create of X * X
-function makeGrid(gridSize) {
-  for(let i = 0; i < gridSize; i++) {
-    for(let j = 0; j < gridSize; j++) {
-        const div = document.createElement('div') 
-        div.style.border = '1px solid black';
-        container.style.gridTemplateColumns = `repeat(${gridSize}, auto)`;
-        container.style.gridTemplateRows = `repeat(${gridSize}, auto)`;
-        container.appendChild(div).classList.add('square')
-    }
+// Create board game
+function createGrid() {
+  for(let i = 0; i < gridSize**2; i++) {
+    const div = document.createElement('div') 
+    div.style.border = '0.5px solid grey';
+    div.style.backgroundColor = 'white';
+    container.insertAdjacentElement("beforeend", div);
+    div.classList.add('square');
   }
 }
 
@@ -49,5 +51,6 @@ function eraseAction() {
 
 // Clear whole grid and ask for size
 function clearAction() {
-
+  square.forEach(square => square.style.background = 'white')
 }
+
