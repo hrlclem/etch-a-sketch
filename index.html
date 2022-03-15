@@ -9,24 +9,26 @@
 
 
 <body>
-    <div class="page">
-        <h1 class="header">ETCH A SKETCH</h1>
-        <div class="buttons">
-            <button class="clear" onclick="clearAction()">Clear</button>
-            <div class="modal">
-                <h2>Choose your grid size!</h2>
-                <input type="number" id="gridSizeValue" value="16">
-                <button class="submit">Submit</button>
-            </div>
+    <div class="modal-container">
+        <div class="modal">
+            <h2>Choose your grid size!</h2>
+            <input type="number" id="gridSizeValue" value="16">
+            <button class="submit">Submit</button>
         </div>
+    </div>
+
+    <h1 class="header">ETCH A SKETCH</h1>
+    <div class="buttons">
+        <button class="clear" onclick="clearAction()">Clear</button>
+    </div>
+    <div class="board">
         <div class="container"></div>
-        <div class="buttons">
-                <button class="black">Black</button>
-                <button class="erase">Erase</button>
-                <button class="colors">Colors</button>
-                <div class="colorPalette">Color Palette</div>
-        </div>
-        <div class="gridSize">Choice gridSize</div>
+    </div>
+    <div class="buttons">
+        <button class="black">Black</button>
+        <button class="erase">Erase</button>
+        <button class="colors">Colors</button>
+        <div class="colorPalette">Color Palette</div>
     </div>
 
     <script src="script.js"></script>
