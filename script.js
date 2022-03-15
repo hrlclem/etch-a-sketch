@@ -3,6 +3,9 @@ const blackBtn = document.querySelector(".black");
 const clearBtn = document.querySelector(".clear");
 const eraseBtn = document.querySelector(".erase");
 const colorsBtn = document.querySelector(".colors");
+const open = document.getElementById('open');
+const modal_container = document.getElementById('modal_container');
+const close = document.getElementById('close');
 
 // Running it
 let gridSize = 80;
@@ -17,6 +20,8 @@ const square = container.querySelectorAll('.square');
 blackColor();
 eraseAction();
 rainbowColor();
+
+
 
 
 
@@ -59,8 +64,19 @@ function rainbowColor() {
   })
 }
 
+
 // Clear whole grid and ask for size
-function clearAction() {
-  square.forEach(square => square.style.background = 'white')
-}
+open.addEventListener('click', () => {
+  square.forEach(square => square.style.background = 'white');
+  modal_container.classList.add('show');
+});
+
+// Close modal
+close.addEventListener('click', () => {
+  modal_container.classList.remove('show');
+  square.forEach(square => square.addEventListener('mouseover', () => {
+    square.style.background = 'white'; 
+  }))
+});
+
 
