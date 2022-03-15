@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 
-let gridSize = 10;
+let gridSize = 30;
 
 function makeGrid(gridSize) {
   for(let i = 0; i < gridSize; i++) {
@@ -12,5 +12,6 @@ function makeGrid(gridSize) {
     }
   }
 }
+
 
 makeGrid(gridSize); 
