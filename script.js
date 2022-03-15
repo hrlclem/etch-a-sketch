@@ -71,6 +71,7 @@ open.addEventListener('click', () => {
   modal_container.classList.add('show');
 });
 
+
 // Close modal
 close.addEventListener('click', () => {
   modal_container.classList.remove('show');
