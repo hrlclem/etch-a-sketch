@@ -1,6 +1,6 @@
 .header{
   margin-top: 0;
-  text-align:center;
+  text-align: center;
   font-family: georgia;
   padding: 1%;
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
@@ -9,13 +9,13 @@
   margin-bottom: 2%;
 }
 
-
 .container {
   display: grid;
   width: 500px;
   height: 500px;
   background: linear-gradient(90deg, rgba(9,9,121,1) 70%, rgb(3, 189, 226) 100%);
   padding:10px;
+  margin-bottom: 2%;
 }
 
 .board {
@@ -34,7 +34,7 @@
   height: 50px;
   background-color: white;
   border-color: rgb(1, 1, 143);
-  border-radius: 15px;
+  border-radius: 8px;
   font-size: 1.5vw;
   color: black;
   margin-bottom: 2%;

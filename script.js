@@ -5,7 +5,7 @@ const eraseBtn = document.querySelector(".erase");
 const colorsBtn = document.querySelector(".colors");
 
 // Running it
-let gridSize = 10;
+let gridSize = 80;
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
@@ -16,6 +16,7 @@ createGrid(gridSize)
 const square = container.querySelectorAll('.square');
 blackColor();
 eraseAction();
+rainbowColor();
 
 
 
@@ -45,6 +46,15 @@ function eraseAction() {
   eraseBtn.addEventListener('click', () => {
     square.forEach(square => square.addEventListener('mouseover', () => {
       square.style.background = 'white'; 
+    }))
+  })
+}
+
+// Change color to rainbow
+function rainbowColor() {
+  colorsBtn.addEventListener('click', () => {
+    square.forEach(square => square.addEventListener('mouseover', () => {
+      square.style.background = `hsl(${Math.random() * 360}, 100%, 50%`; 
     }))
   })
 }
