@@ -21,6 +21,8 @@ rainbowColor();
 
 
 
+
+
 // Create board game
 function createGrid() {
   for(let i = 0; i < gridSize**2; i++) {
