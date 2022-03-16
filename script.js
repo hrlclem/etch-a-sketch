@@ -8,11 +8,9 @@ const modal_container = document.getElementById('modal_container');
 const close = document.getElementById('close');
 
 // Running it
-let gridSize = 80;
+let gridSize = 2;
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
-
-
 
 
 
@@ -21,7 +19,6 @@ const square = container.querySelectorAll('.square');
 blackColor();
 eraseAction();
 rainbowColor();
-
 
 
 
