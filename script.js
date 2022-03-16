@@ -12,8 +12,6 @@ let gridSize = 2;
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
-
-
 createGrid(gridSize)
 const square = container.querySelectorAll('.square');
 blackColor();
