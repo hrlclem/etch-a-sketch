@@ -12,8 +12,8 @@
     <div class="modal-container" id="modal_container">
         <div class="modal">
             <h2>Choose your grid size!</h2>
-            <input id="myRange" type="range" min="8" max="64" value="32" class="slider" oninput="this.nextElementSibling.value = this.value">
-            <span id="demo"></span>
+            <input id="myRange" type="range" min="8" max="64" value="32" class="slider" onchange="updateSlider(this.value)">
+            <output id="sliderAmount"></output>
             <button class="submit" id="close">Submit</button>
         </div>
     </div>
