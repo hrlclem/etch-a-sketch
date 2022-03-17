@@ -60,16 +60,59 @@
 }
 
 .modal {
-  display: block;
-
+  justify-content: center;
+  align-items: center;
+  text-align:center;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   border-radius: 8px;
-  padding: 8%;
-  text-align: center;
+  padding: 6%;
+}
 
+.myRange, 
+.close, 
+.sliderAmount{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  padding: 8%;
+  margin:8%;
+}
+
+.sliderAmount{
+  font-size: 1.5vw;
+  font-family: arial;
+  margin-bottom:8%;
 }
 
 .modal h2{
   font-family: arial;
+
+}
+
+.submit {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1.5vw;
+	font-weight:bold;
+	padding:6px 24px;
+  margin-top: 12%;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.submit:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.submit:active {
+	position:relative;
+	top:1px;
 }
