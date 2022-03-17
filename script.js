@@ -77,5 +77,3 @@ close.addEventListener('click', () => {
     square.style.background = 'white'; 
   }))
 });
-
-
