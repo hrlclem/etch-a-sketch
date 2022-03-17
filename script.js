@@ -12,30 +12,40 @@ const close = document.getElementById('close');
 
 
 // Running it
-let gridSize = 16;
-let slideAmount;
+let gridSize = 8;
+let slideAmount = gridSize;
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
-createGrid(gridSize)
+createGrid(gridSize);
 const square = container.querySelectorAll('.square');
 blackColor();
 eraseAction();
 rainbowColor();
+gridSizeChange();
 
 
-// Slider gridSize amount choice
+
+
+// Modal area: show gridSize value
+var sliderDiv = document.getElementById("sliderAmount");
+sliderDiv.innerHTML = gridSize;
+document.getElementById("myRange").value = gridSize;
+
+
+// Modal area: update slider value
 function updateSlider(slideAmount) {
-  var sliderDiv = document.getElementById("sliderAmount");
+  sliderDiv = document.getElementById("sliderAmount");
   sliderDiv.innerHTML = slideAmount;
   return slideAmount;
 }
 
 
-// Change gridSize amount
+
+// Modal area: change gridSize amount
 function gridSizeChange() {
   submitBtn.addEventListener('click', () => {
-    console.log(gridsize);
+
   })
 }
 
