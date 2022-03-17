@@ -40,7 +40,8 @@ function createGrid() {
 
 // Reset boardgame
 function resetGridSize() { 
-  createGrid(gridSize);
+  container.innerHTML = "";
+  createGrid(slideAmount);
 }
 
 // Change color to black
@@ -86,6 +87,7 @@ document.getElementById("myRange").value = gridSize;
 function updateSlider(slideAmount) {
   sliderDiv = document.getElementById("sliderAmount");
   sliderDiv.innerHTML = slideAmount;
+  gridSize = slideAmount;
 }
 
 // Close modal
