@@ -60,11 +60,13 @@
 }
 
 .modal {
+  display: block;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   border-radius: 8px;
   padding: 8%;
   text-align: center;
+
 }
 
 .modal h2{

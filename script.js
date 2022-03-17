@@ -9,7 +9,7 @@ const close = document.getElementById('close');
 
 
 // Running it
-let gridSize = 2;
+let gridSize = 16;
 container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
