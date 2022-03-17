@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const squares = container.querySelectorAll("div");
 const blackBtn = document.querySelector(".black");
 const clearBtn = document.querySelector(".clear");
 const eraseBtn = document.querySelector(".erase");
@@ -12,10 +13,8 @@ const close = document.getElementById('close');
 
 
 // Running it
-let gridSize = 8;
+let gridSize = 10;
 let slideAmount = gridSize;
-container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
-container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
 createGrid(gridSize);
 const square = container.querySelectorAll('.square');
@@ -25,16 +24,23 @@ rainbowColor();
 
 
 
-
 // Create board game
 function createGrid() {
+  container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+  container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+
   for(let i = 0; i < gridSize**2; i++) {
-    const div = document.createElement('div') 
-    div.style.border = '0.5px solid grey';
-    div.style.backgroundColor = 'white';
-    container.insertAdjacentElement("beforeend", div);
-    div.classList.add('square');
+    const square = document.createElement('div') 
+    square.style.border = '0.5px solid grey';
+    square.style.backgroundColor = 'white';
+    container.insertAdjacentElement("beforeend", square);
+    square.classList.add('square');
   }
+}
+
+// Reset boardgame
+function resetGridSize() { 
+  createGrid(gridSize);
 }
 
 // Change color to black
@@ -64,7 +70,6 @@ function rainbowColor() {
   })
 }
 
-
 // Open modal: clear whole grid and ask for size
 open.addEventListener('click', () => {
   square.forEach(square => square.style.background = 'white');
@@ -85,6 +90,7 @@ function updateSlider(slideAmount) {
 
 // Close modal
 close.addEventListener('click', () => {
+  resetGridSize();
   modal_container.classList.remove('show');
   square.forEach(square => square.addEventListener('mouseover', () => {
     square.style.background = 'white'; 
