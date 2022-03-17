@@ -22,33 +22,6 @@ const square = container.querySelectorAll('.square');
 blackColor();
 eraseAction();
 rainbowColor();
-gridSizeChange();
-
-
-
-
-// Modal area: show gridSize value
-var sliderDiv = document.getElementById("sliderAmount");
-sliderDiv.innerHTML = gridSize;
-document.getElementById("myRange").value = gridSize;
-
-
-// Modal area: update slider value
-function updateSlider(slideAmount) {
-  sliderDiv = document.getElementById("sliderAmount");
-  sliderDiv.innerHTML = slideAmount;
-  return slideAmount;
-}
-
-
-
-// Modal area: change gridSize amount
-function gridSizeChange() {
-  submitBtn.addEventListener('click', () => {
-
-  })
-}
-
 
 
 
@@ -92,12 +65,23 @@ function rainbowColor() {
 }
 
 
-// Clear whole grid and ask for size
+// Open modal: clear whole grid and ask for size
 open.addEventListener('click', () => {
   square.forEach(square => square.style.background = 'white');
   modal_container.classList.add('show');
 });
 
+// Modal area: show gridSize value
+var sliderDiv = document.getElementById("sliderAmount");
+sliderDiv.innerHTML = gridSize;
+document.getElementById("myRange").value = gridSize;
+
+
+// Modal area: update slider value
+function updateSlider(slideAmount) {
+  sliderDiv = document.getElementById("sliderAmount");
+  sliderDiv.innerHTML = slideAmount;
+}
 
 // Close modal
 close.addEventListener('click', () => {
