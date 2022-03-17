@@ -31,7 +31,7 @@ function createGrid() {
 
   for(let i = 0; i < gridSize**2; i++) {
     const square = document.createElement('div') 
-    square.style.border = '0.5px solid grey';
+    square.style.border = '0.5px solid lightgray';
     square.style.backgroundColor = 'white';
     container.insertAdjacentElement("beforeend", square);
     square.classList.add('square');
