@@ -1,5 +1,4 @@
 const container = document.querySelector(".container");
-const squares = container.querySelectorAll("div");
 const blackBtn = document.querySelector(".black");
 const clearBtn = document.querySelector(".clear");
 const eraseBtn = document.querySelector(".erase");
@@ -17,7 +16,7 @@ let gridSize = 10;
 let slideAmount = gridSize;
 
 createGrid(gridSize);
-const square = container.querySelectorAll('.square');
+let square = container.querySelectorAll('.square');
 blackColor();
 eraseAction();
 rainbowColor();
@@ -47,6 +46,7 @@ function resetGridSize() {
 // Change color to black
 function blackColor() {
   blackBtn.addEventListener('click', () => {
+    square = container.querySelectorAll('.square');
     square.forEach(square => square.addEventListener('mouseover', () => {
       square.style.background = 'black'; 
     }))
