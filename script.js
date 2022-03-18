@@ -10,7 +10,6 @@ const close = document.getElementById('close');
 
 
 
-
 // Running it
 let gridSize = 10;
 let slideAmount = gridSize;
