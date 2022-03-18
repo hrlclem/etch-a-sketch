@@ -21,7 +21,6 @@ eraseAction();
 rainbowColor();
 
 
-
 // Create board game
 function createGrid() {
   container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
