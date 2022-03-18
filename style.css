@@ -109,8 +109,7 @@
 }
 
 .myRange, 
-.close, 
-.sliderAmount{
+.close{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,9 +119,15 @@
 }
 
 .sliderAmount{
-  font-size: 1.5vw;
+  font-size: 2vw;
   font-family: arial;
-  margin-bottom:8%;
+  margin-bottom: 10px;
+}
+
+.myRange{
+  font-size: 2vw;
+  font-family: arial;
+  margin-bottom: 10px;
 }
 
 .modal h2{
